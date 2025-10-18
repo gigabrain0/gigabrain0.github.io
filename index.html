@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="GigaBrain-0: A World Model-Powered Vision-LanguageAction Model">
+  <meta name="keywords" content="GigaAI, Robotics, Embodied AI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GigaBrain-0: A World Model-Powered Vision-LanguageAction Model</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/GigaAI-research">
+        <img src="./static/images/logo.png" alt="Logo" style="height: 28px; width: auto;">
+      <!-- <span class="icon">
+          <i class="fas fa-home"></i>
+      </span> -->
+      </a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">GigaBrain-0: A World Model-Powered Vision-LanguageAction Model</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/GigaAI-research">GigaAI</a></span>
+          </div>
+
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arxiv Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://github.com/gigabrain0/gigabrain0.github.io/releases/download/v1.0/introduction.mp4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/GigaAI-research/GigaBrain-0"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+              <div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--<section class="hero video">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      <div class="content has-text-centered">-->
+<!--        <video controls autoplay muted loop playsinline style="max-width: 900px; width: 100%; height: auto;">-->
+<!--          <source src="./static/videos/demo.webm" type="video/mp4">-->
+<!--        </video>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <figure class="image">
+        <img src="./static/images/main_demo.png" alt="static Teaser" style="max-width: 900px; margin: auto;">
+      </figure>
+      <h3 class="subtitle has-text-centered">
+        GigaBrain-0 is a Vision-Language-Action (VLA) model trained on real-world robot data and diverse data generated by world models, including video generation data, Real2Real transfer data, human transfer data, view transfer data, and Sim2Real transfer data, to enhance its generalization in real-world environments.
+      </h3>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Training Vision-Language-Action (VLA) models for generalist robots typically requires large-scale realworld robot data, which is expensive and time-consuming to collect. The inefficiency of physical data collection severely limits the scalability, and generalization capacity of current VLA systems.
+          </p>
+          <p>
+            To address this challenge, we introduce GigaBrain-0, a novel VLA foundation model empowered by world modelgenerated data (e.g., video generation, real2real transfer, human transfer, view transfer, sim2real transfer data). By leveraging world models to generate diverse data at scale, GigaBrain-0 significantly reduces reliance on real robot data while improving cross-task generalization. Our approach further improves policy robustness through RGBD input modeling and embodied Chain-of-Thought (CoT) supervision, enabling the model to reason about spatial geometry, object states, and long-horizon dependencies during task execution. This leads to substantial gains in real-world performance on dexterous, longhorizon, and mobile manipulation tasks. 
+          </p>
+          <p>
+            Extensive experiments demonstrate that GigaBrain-0 achieves superior generalization across variations in appearances (e.g., textures, colors), object placements, and camera viewpoints. Additionally, we present GigaBrain-0-Small, an optimized lightweight variant designed to run efficiently on devices such as the NVIDIA Jetson AGX Orin.          
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<!-- Dataset -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Dataset</h2>
+      </div>
+    </div>
+
+    <div class="content">
+      <h3 class="title is-4">Data Samples</h3>
+      <p>
+        Comparison of training data usage across VLA models.
+        GigaBrain-0 leverages a diverse set of data sources to enhance generalization and reduce dependency on real-world robot data.
+      </p>
+      <figure class="image">
+        <img src="./static/images/dataset_compare.png" alt="dataset samples" style="width: 100%; max-width: 1200px; display: block; margin: 0 auto;">
+      </figure>
+    </div>
+
+    <div>
+      <h3 class="title is-4">Statistics</h3>
+
+      <div class="content">
+        <p>
+          GigaBrain-0's self-collected real-world robot data is gathered from PiPER arms and the AgiBot G1 platform, spanning diverse environments including homes, supermarkets, factories, and office settings.
+        </p>
+        <figure class="image">
+          <img src="./static/images/dataset_collection.png" alt="scenes distribution" style="width: 100%; max-width: 1200px; display: block; margin: 0 auto;">
+        </figure>
+      </div>
+
+      <div class="content">
+        <p>
+          GigaWorld enables Real2Real apperance transfer by taking real-world captured data and generating generalized variations in texture, color, lighting, and material properties.
+        </p>
+        <figure class="image">
+          <img src="./static/images/real2real_transfer.png" alt="objects distribution" style="width: 100%; max-width: 1200px; display: block; margin: 0 auto;">
+        </figure>
+      </div>
+
+      <div class="content">
+        <p>
+          GigaWorld supports view transfer by re-rendering real-world captured data from diverse viewpoints, thereby enriching the dataset with varied perspective changes.
+        </p>
+        <figure class="image">
+          <img src="./static/images/view_transfer.png" alt="view transfer examples" style="width: 100%; max-width: 1200px; display: block; margin: 0 auto;">
+        </figure>
+      </div>
+
+      <div class="content">
+        <p>
+          GigaWorld enables Sim2Real transfer by generalizing simulation-collected data in terms of texture, color, lighting, and material properties to better bridge the domain gap and enhance realism.
+        </p>
+        <figure class="image">
+          <img src="./static/images/sim2real_transfer.png" alt="sim2real transfer" style="width: 100%; max-width: 1200px; display: block; margin: 0 auto;">
+        </figure>
+      </div>
+
+      <div class="content">
+        <p>
+          GigaWorld supports egocentric human video transfer by transforming first-person human hand actions into robotic manipulation scenarios, effectively mapping human demonstrations to robot-executable tasks.
+        </p>
+        <figure class="image">
+          <img src="./static/images/mimic.png" alt="human to robot transfer" style="width: 100%; max-width: 1200px; display: block; margin: 0 auto;">
+        </figure>
+      </div>
+
+      <div class="content">
+        <p>
+          GigaWorld can generate diverse future trajectories from the same initial frame under different text prompts, thereby augmenting the dataset with novel manipulation sequences.
+        </p>
+        <figure class="image">
+          <img src="./static/images/idm.png" alt="future trajectory generation" style="width: 100%; max-width: 1200px; display: block; margin: 0 auto;">
+        </figure>
+      </div>
+
+      <div class="content">
+        <p>
+          GigaWorld can generate multi-view consistent videos, thereby enabling 3D-aware training and improving spatial reasoning in downstream tasks.
+        </p>
+        <figure class="image">
+          <img src="./static/images/multiview_gen_demo.png" alt="multi-view generation" style="width: 100%; max-width: 1200px; display: block; margin: 0 auto;">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Model -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column">
+        <h2 class="title is-3">Gigabrain-0 Model</h2>
+      </div>
+    </div>
+
+    <h3 class="title is-4">Model Architecture</h3>
+      <div class="content has-text-justified">
+        <p>
+          The framework of GigaBrain-0. GigaBrain-0 takes RGB-D input to enhance spatial perception and outputs Embodied Chain-of-Thought (Embodied CoT) as an intermediate representation to strengthen embodied reasoning for manipulation. 
+          During training, GigaBrain-0 employs Knowledge Insulation (Driess et al., 2025) to prevent interference between the optimization processes of action prediction and Embodied CoT generation.
+        </p>
+      </div>
+      <div class="content has-text-centered">
+        <figure class="image">
+          <img src="./static/images/framework.png" alt="VLA architecture">
+        </figure>
+      </div>
+
+    <div>
+      <h3 class="title is-4">Comparison</h3>
+      <div class="content has-text-justified">
+        <p>
+          <b>Compare with SOTA VLA models.</b> Performance comparison with state-of-the-art VLA models across six evaluation tasks.
+        </p>
+      </div>
+      <div class="content has-text-centered">
+        <figure class="image">
+          <img src="./static/images/table1.png" alt="Benchmarking Pre-training">
+        </figure>
+      </div>
+    </div>
+
+    <br>
+    <div>
+      <h3 class="title is-4">Generalization performance</h3>
+      <div class="content has-text-justified">
+        <p>
+          Generalization performance of GigaBrain-0 under appearance, placement, and viewpoint shifts. The horizontal axis denotes the sampling probability 𝛼 of world model-generated data used during training.
+        </p>
+      </div>
+      <div class="content has-text-centered">
+        <figure class="image">
+          <img src="./static/images/table2.png" alt="Few-shot Transfer">
+        </figure>
+      </div>
+    </div>
+
+    <br>
+    <div>
+      <h3 class="title is-4">Gigabrain-0-Small</h3>
+      <div class="content has-text-justified">
+        <p>
+          We present GigaBrain-0-Small, an optimized lightweight variant specifically designed for efficient inference on edge platforms such as the NVIDIA Jetson AGX Orin.        
+        </p>
+      </div>
+      <div class="content has-text-centered">
+        <figure class="image">
+          <img src="./static/images/gigabra0small_compare.png" alt="VLM Instruction accuracy in benchmark tasks" style="width: 80%; display: block; margin: auto;">
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{gigabrain-0
+    title={GigaBrain-0: A World Model-Powered Vision-LanguageAction Model},
+    author={GigaAI},
+    journal={arXiv preprint arXiv:\},
+    year={2025}
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/GigaAI-research" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website page is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This website page template is borrowed from  <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
