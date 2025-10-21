@@ -185,10 +185,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Training Vision-Language-Action (VLA) models for generalist robots typically requires large-scale realworld robot data, which is expensive and time-consuming to collect. The inefficiency of physical data collection severely limits the scalability, and generalization capacity of current VLA systems.
+            Training Vision-Language-Action (VLA) models for generalist robots typically requires large-scale real-world robot data, which is expensive and time-consuming to collect. The inefficiency of physical data collection severely limits the scalability, and generalization capacity of current VLA systems.
           </p>
           <p>
-            To address this challenge, we introduce GigaBrain-0, a novel VLA foundation model empowered by world modelgenerated data (e.g., video generation, real2real transfer, human transfer, view transfer, sim2real transfer data). By leveraging world models to generate diverse data at scale, GigaBrain-0 significantly reduces reliance on real robot data while improving cross-task generalization. Our approach further improves policy robustness through RGBD input modeling and embodied Chain-of-Thought (CoT) supervision, enabling the model to reason about spatial geometry, object states, and long-horizon dependencies during task execution. This leads to substantial gains in real-world performance on dexterous, longhorizon, and mobile manipulation tasks. 
+            To address this challenge, we introduce GigaBrain-0, a novel VLA foundation model empowered by world model-generated data (e.g., video generation, real2real transfer, human transfer, view transfer, sim2real transfer data). By leveraging world models to generate diverse data at scale, GigaBrain-0 significantly reduces reliance on real robot data while improving cross-task generalization. Our approach further improves policy robustness through RGBD input modeling and embodied Chain-of-Thought (CoT) supervision, enabling the model to reason about spatial geometry, object states, and long-horizon dependencies during task execution. This leads to substantial gains in real-world performance on dexterous, longhorizon, and mobile manipulation tasks. 
           </p>
           <p>
             Extensive experiments demonstrate that GigaBrain-0 achieves superior generalization across variations in appearances (e.g., textures, colors), object placements, and camera viewpoints. Additionally, we present GigaBrain-0-Small, an optimized lightweight variant designed to run efficiently on devices such as the NVIDIA Jetson AGX Orin.          
@@ -296,7 +296,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column">
-        <h2 class="title is-3">Gigabrain-0 Model</h2>
+        <h2 class="title is-3">GigaBrain-0 Model</h2>
       </div>
     </div>
 
@@ -317,7 +317,8 @@
       <h3 class="title is-4">Comparison</h3>
       <div class="content has-text-justified">
         <p>
-          <b>Compare with SOTA VLA models.</b> Performance comparison with state-of-the-art VLA model π0 across six evaluation tasks.
+         Performance comparison with state-of-the-art VLA model π0 across six tasks on G1 and PiPER robot platform. GigaBrain-0 outperforms π0 across <b>dexterous manipulation tasks</b>: (a) Laundry Folding and (b) Paper Towel Preparation ; <b>long-horizon tasks</b>: (c) Juice Preparation and (d) Table Bussing; <b>mobile manipulation tasks</b>: (e) Boxes Moving and (f) Laundry Baskets Moving.
+
         </p>
       </div>
       <div class="content has-text-centered">
@@ -332,7 +333,7 @@
       <h3 class="title is-4">Generalization performance</h3>
       <div class="content has-text-justified">
         <p>
-          Generalization performance of GigaBrain-0 under appearance, placement, and viewpoint shifts. The horizontal axis denotes the sampling probability 𝛼 of world model-generated data used during training.
+          Generalization performance of GigaBrain-0 under appearance, placement, and viewpoint shifts. The horizontal axis denotes the sampling probability α of world model–generated data used during training. As α increases from 0% to 90%, GigaBrain-0 exhibits a substantial improvement in generalization performance across novel appearance, object placement, and viewpoint conditions. This demonstrates that incorporating a higher proportion of synthetically generated training data significantly enhances the model’s robustness to real-world distribution shifts. 
         </p>
       </div>
       <div class="content has-text-centered">
@@ -344,10 +345,10 @@
 
     <br>
     <div>
-      <h3 class="title is-4">Gigabrain-0-Small</h3>
+      <h3 class="title is-4">GigaBrain-0-Small</h3>
       <div class="content has-text-justified">
         <p>
-          We present GigaBrain-0-Small, an optimized lightweight variant specifically designed for efficient inference on edge platforms such as the NVIDIA Jetson AGX Orin.        
+          We present GigaBrain-0-Small, an optimized lightweight variant specifically designed for efficient inference on edge platforms such as the NVIDIA Jetson AGX Orin. Compared to 𝜋₀, GigaBrain-0-Small achieves significantly higher inference efficiency on the Orin while maintaining comparable success rates on the table bussing task, demonstrating its effectiveness as a compact yet capable policy for real-world robotic deployment.
         </p>
       </div>
       <div class="content has-text-centered">
